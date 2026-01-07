@@ -1,0 +1,206 @@
+:root {
+    --tuku-brown: #4a3428;
+    --tuku-cream: #fdfaf5;
+    --tuku-accent: #d4a373;
+    --tuku-dark: #2b2b2b;
+}
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: var(--tuku-cream);
+    color: var(--tuku-dark);
+}
+
+.text-brown {
+    color: var(--tuku-brown);
+}
+
+.text-accent {
+    color: #d4a373;
+}
+
+.hero-section {
+    background: linear-gradient(rgba(74, 52, 40, 0.5), rgba(74, 52, 40, 0.5)), url('bg tuku.png');
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+}
+
+.text-primary-custom {
+    color: var(--tuku-accent) !important;
+}
+
+.card {
+    transition: all 0.3s ease;
+    border-radius: 0; 
+    border: 1px solid rgba(74, 52, 40, 0.1);
+    background-color: white;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(74, 52, 40, 0.1);
+}
+
+.btn-primary {
+    background-color: var(--tuku-brown);
+    border: none;
+    border-radius: 0;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: var(--tuku-dark);
+    color: var(--tuku-cream);
+}
+
+.bg-cream {
+    background-color: var(--tuku-cream);
+}
+
+.polaroid-frame {
+    background: white;
+    padding: 15px 15px 60px 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.5s ease;
+    max-width: 90%;
+    margin: auto;
+    border: 1px solid #eee;
+}
+
+.gallery-row:nth-child(1) .polaroid-frame {
+    transform: rotate(0deg);
+}
+
+.gallery-row:nth-child(2) .polaroid-frame {
+    transform: rotate(3deg);
+}
+
+.gallery-row:nth-child(3) .polaroid-frame {
+    transform: rotate(-3deg);
+}
+
+.polaroid-frame img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    filter: sepia(5%);
+}
+
+.polaroid-caption {
+    font-family: 'Courier New', Courier, monospace;
+    color: #555;
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.polaroid-frame:hover {
+    transform: rotate(0deg) scale(1.05) !important;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+    z-index: 10;
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.gallery-row {
+    padding: 60px 0;
+}
+
+.tuku-badge {
+    background-color: #d4a373;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-block;
+}
+
+footer {
+    background-color: var(--tuku-brown);
+    color: var(--tuku-cream);
+    border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+.footer-link {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.6) !important; 
+    transition: all 0.3s ease;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.footer-link:hover {
+    color: #d4a373 !important;
+    padding-left: 5px;
+}
+
+.map-container {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border: 1px solid #eee;
+}
+.map-container iframe {
+    display: block;
+}
+
+.social-link-item {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: white;
+    color: var(--tuku-brown);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    text-decoration: none;
+    border: 1px solid #eee;
+}
+
+.social-link-item:hover {
+    transform: translateY(-5px);
+    background: var(--tuku-accent);
+    color: white;
+    border-color: var(--tuku-accent);
+}
+
+.social-circle {
+    width: 35px;
+    height: 35px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.social-circle:hover {
+    background: #d4a373;
+    color: white;
+    transform: translateY(-3px);
+}
+
+
